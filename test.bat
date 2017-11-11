@@ -1,10 +1,10 @@
-rem echo off
+echo off
 
 set /a "MM=%date:~5,2%"
 
 echo %ERRORLEVEL%
 
-dir | findstr accdb
+net use | findstr hoge 
 
 if %ERRORLEVEL% equ 1 (
 	set /a "MM=%date:~5,1%*10 + %date:~6,1%-1"
